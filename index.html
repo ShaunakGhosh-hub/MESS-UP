@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | MessUp</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/MESS.jpg" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="my-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signup-modal">
+                            <i class="fas fa-user"></i>Signup
+                        </a>
+                    </li>
+                    <div class="nav-vl"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#login-modal">
+                            <i class="fas fa-sign-in-alt"></i>Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="loading">
+    </div>
+
+    <div class="banner-container">
+        <h2 class="white pb-3">Get pgs and hostels around your college</h2>
+
+        <form id="search-form">
+            <div class="input-group city-search">
+                <input type="text" class="form-control input-city" id='city' name='city' placeholder="Enter your college to search for PGs" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="page-container">
+        <h1 class="city-heading">
+            Major Colleges
+        </h1>
+        <div class="row">
+            <div class="city-card-container col-md">
+                <a href="property_list.html">
+                    <div class="city-card rounded-circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmf6hIvr9LF6IyzxXswnhyYUcutkfjKy-taQ&s" class="city-img" />
+                    </div>
+                    
+                </a>
+                <h1>NSEC</h1><h2>new garia</h2>
+            </div>
+
+            <div class="city-card-container col-md">
+                <a href="property_list.html">
+                    <div class="city-card rounded-circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGNS1Ccb8WOy69MEjlgqSBg0VOlfOjLortvQ&s" class="city-img" />
+                    </div>
+                </a>
+                <h1>St Xaviers</h1><h2>Park Street</h2>
+            </div>
+
+            <div class="city-card-container col-md">
+                <a href="property_list.html">
+                    <div class="city-card rounded-circle">
+                        <img src="data:image/jpeg;base64,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" class="city-img" />
+                    </div>
+                </a>
+                <h1>Jadavpur</h1><h2>Jadavpur</h2>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-heading" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signup-heading">Signup with PGLife</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="signup-form" class="form" role="form">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" name="full_name" placeholder="Full Name" maxlength="30" required>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-phone-alt"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number" maxlength="10" minlength="10" required>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control" name="password" placeholder="Password" minlength="6" required>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-university"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" name="college_name" placeholder="College Name" maxlength="150" required>
+                        </div>
+
+                        <div class="form-group">
+                            <span>I'm a</span>
+                            <input type="radio" class="ml-3" id="gender-male" name="gender" value="male" /> Male
+                            <label for="gender-male">
+                            </label>
+                            <input type="radio" class="ml-3" id="gender-female" name="gender" value="female" />
+                            <label for="gender-female">
+                                Female
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-primary">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <span>Already have an account?
+                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login-modal">Login</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-heading" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login-heading">Login with PGLife</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="login-form" class="form" role="form">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control" name="password" placeholder="Password" minlength="6" required>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <span>
+                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signup-modal">Click here</a>
+                        to register a new account
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="page-container footer-container">
+            <div class="footer-cities">
+                <div class="footer-city">
+                    <a href="property_list.html">PG in Garia</a>
+                </div>
+                <div class="footer-city">
+                    <a href="property_list.html">PG in Park Street</a>
+                </div>
+                <div class="footer-city">
+                    <a href="property_list.html">PG in Jadavpur</a>
+                </div>
+                
+            </div>
+            <div class="footer-copyright"><p>&#169; Shaunak Ghosh 2024 All Right Reserved.</p></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
